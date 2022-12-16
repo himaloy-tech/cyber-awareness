@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block head %}
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+{% endblock head %}
+{% block body %}
+<h1 class="center p-4">Our Articles</h1>
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-17 mx-auto" id="articlecontainer">
+        <div class="flex flex-wrap -m-4">
+            {% for article in Articles %}
+            <div class="p-4 md:w-1/3">
+                <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" style="height:14rem;" src="{{article.thumbnail.url}}"
+                        alt="blog">
+                    <div class="p-6">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                            {{article.category}}</h2>
+                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{article.title}}</h1>
+                        <p class="leading-relaxed mb-3">{{article.desc|truncatechars:298}}</p>
+                        <div class="flex items-center flex-wrap ">
+                            <a href="/articleView/{{article.id}}">
+                                <button type="button" class="btn btn-info">View Material</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<footer>
+    Copyright &copy; 2022 Himaloy Mondal
+</footer>
+{% endblock body %}
+{% block script %}
+<script src="{% static 'js/typing.js' %}"></script>
+{% endblock script %}
+<!-- <section id="banner">
+    <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+</section>
+<h1 class="center">Popular Articles</h1>
+<section id="features">
+    {% for article in Articles %}
+        <a href="articleView/{{article.id}}" style="text-decoration: none;">
+            <div class="box-front" id="box-1">
+                <img src="{{article.thumbnail.url}}" alt="computer lab">
+                <h1>{{article.title}}</h1>
+                <p>{{article.desc|truncatechars:298}}</p>
+            </div>
+        </a>
+    {% endfor %}
+</section> -->

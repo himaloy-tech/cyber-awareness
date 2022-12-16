@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+
+<section id="banner">
+    <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+</section>
+<h1 class="center">Popular Articles</h1>
+<section id="features">
+    {% for article in Articles %}
+        <a href="articleView/{{article.id}}" style="text-decoration: none;">
+            <div class="box-front" id="box-1">
+                <img src="{{article.thumbnail.url}}" alt="computer lab">
+                <h1>{{article.title}}</h1>
+                <p>{{article.desc|truncatechars:298}}</p>
+            </div>
+        </a>
+    {% endfor %}
+</section>
+<div class="container-btn">
+    <a href="/articlehub">
+        <button class="submit-btn" type="button" style="margin-bottom: 1rem;">More Articles</button>
+    </a>
+</div>
+<section class="contact">
+    <div class="formwebsite">
+        <form action="/contact" method="POST" id="form">{% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <label for="message">Query:</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your query here"
+                required></textarea>
+            <div class="container-btn">
+                <!-- <a class="submit-btn" onclick="submit()">submit</a> -->
+                <button class="submit-btn" type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+<footer>
+    Copyright &copy; 2022 Himaloy Mondal
+</footer>
+{% endblock body %}
+{% block script %}
+<script src="{% static 'js/typing.js' %}"></script>
+{% endblock script %}

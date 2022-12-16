@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block style %}
+<style>
+    h2 {
+        padding: 20px;
+    }
+
+    #articledata {
+        padding-top: 6px !important;
+        padding: 15%;
+        text-align: justify;
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<center>
+    <h2 style="padding: 20px;">{{article.title}}</h2>
+</center>
+<center>
+    <p id="articledata">{{article.desc}}</p>
+</center>
+<hr>
+<center>
+    <div class="form-group" style="margin: 27px;">
+        <h3>Post a Comment</h3>
+        <form method="POST" id="form">
+            {% csrf_token %}
+            <input type="number" name="arcticle" id="articleId" value="{{articleId}}" hidden>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="text" name="text" placeholder="Enter Text" required>
+            </div>
+            <button type="submit" class="submit-btn" style="margin-top: 1rem;font-size:1rem;"
+                id="sub-btn">Submit</button>
+        </form>
+    </div>
+</center>
+<div class="comments">
+</div>
+{% endblock body %}
+
+{% block script %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="{% static " js/form.js" %}"></script>
+{% endblock %}
