@@ -28,9 +28,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECRET_KEY = '$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app']
 
 
 # Application definition
