@@ -9,7 +9,7 @@
 <section id="features">
     {% for article in Articles %}
         <a href="articleView/{{article.id}}" style="text-decoration: none;">
-            <div class="box-front" id="box-1">
+            <div class="box-front" id="box-{{article.id}}">
                 <img src="{{article.thumbnail.url}}" alt="computer lab">
                 <h1>{{article.title}}</h1>
                 <p>{{article.desc|truncatechars:298}}</p>
