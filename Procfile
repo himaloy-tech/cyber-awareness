@@ -1,0 +1,1 @@
+web: gunicorn cyber.wsgi --timeout 600 --log-file -
