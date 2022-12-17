@@ -7,7 +7,7 @@ class Contact(models.Model):
     message = models.TextField()
     email = models.EmailField()
     datetime = models.DateTimeField(auto_now_add=True)
-
+    id = models.AutoField(primary_key=True)
     def __str__(self):
         return f"{self.name}"
 
