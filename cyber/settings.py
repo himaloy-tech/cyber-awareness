@@ -28,9 +28,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECRET_KEY = '$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -123,8 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-
 STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
+STATIC_URL = 'appie/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "appie/static")
+]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
