@@ -37,7 +37,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
        'https://cyber-awareness-7qrkc.ondigitalocean.app',
-       'http://www.cybercare.net.in',
+       'https://www.cybercare.net.in',
 )
 CORS_ALLOW_METHODS = [
     "DELETE",
