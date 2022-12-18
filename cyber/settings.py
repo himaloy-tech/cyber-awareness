@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app']
+ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'cybercare.net.in']
 
 
 # Application definition
@@ -37,6 +37,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
        'https://cyber-awareness-7qrkc.ondigitalocean.app',
+       'http://www.cybercare.net.in',
 )
 CORS_ALLOW_METHODS = [
     "DELETE",
