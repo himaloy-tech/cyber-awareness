@@ -157,8 +157,8 @@ AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 
-AWS_LOCATION = 'static'
 # static settings
+AWS_LOCATION = 'static'
 STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
@@ -166,6 +166,3 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
-
-# PRIVATE_MEDIA_LOCATION = 'private'
-# PRIVATE_FILE_STORAGE = 'cyber.storage_backends.PrivateMediaStorage'
