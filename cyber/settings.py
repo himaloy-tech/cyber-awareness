@@ -37,7 +37,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
        'https://cyber-awareness-7qrkc.ondigitalocean.app',
-       '127.0.0.1:8000'
+       'https://127.0.0.1:8000'
 )
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -139,7 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'GMT'
 
 USE_I18N = True
 
@@ -150,6 +150,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR/'appie', "static")
+# ]
+
+# STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AWS_ACCESS_KEY_ID = 'DO00MXLHX3C44L97TKN3'
 AWS_SECRET_ACCESS_KEY = '8WRHOXM7lb5UosZIagrwuVgIzPw3EH3vJ7ZnarnhZ1w'
