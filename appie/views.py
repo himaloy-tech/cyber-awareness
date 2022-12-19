@@ -36,7 +36,6 @@ def PostComment(request):
     if request.method == "POST":
         text = request.POST.get('text')
         id = request.POST.get('articleId')
-        print(id)
         comment = Comment(article=Article.objects.get(id=id), comment=text)
         comment.save()
         return JsonResponse({
