@@ -31,7 +31,10 @@ function bringComments() {
                 let div = document.createElement('div');
                 div.className = 'card';
                 div.style.margin = '20px';
+                let date = comment.time.split("T");
+                let time = date[1].split(".")
                 let html = `<div class="card-header">
+                ${date[0]} ${time[0]}
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
