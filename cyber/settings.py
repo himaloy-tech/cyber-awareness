@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
 
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -151,6 +152,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR/'appie', "static")
+# ]
+
+# STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 AWS_ACCESS_KEY_ID = 'DO00MXLHX3C44L97TKN3'
 AWS_SECRET_ACCESS_KEY = '8WRHOXM7lb5UosZIagrwuVgIzPw3EH3vJ7ZnarnhZ1w'
 AWS_STORAGE_BUCKET_NAME = 'cyber-awareness-files'
@@ -167,3 +177,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
+
+# PRIVATE_MEDIA_LOCATION = 'private'
+# PRIVATE_FILE_STORAGE = 'cyber.storage_backends.PrivateMediaStorage'

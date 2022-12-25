@@ -8,11 +8,14 @@
 <h1 class="center">Popular Articles</h1>
 <section id="features">
     {% for article in Articles %}
-        <a href="articleView/{{article.id}}" style="text-decoration: none;">
+        <a href="articleView/{{article.id}}" style="text-decoration: none;" aria-label="view the article">
             <div class="box-front" id="box-{{article.id}}">
                 <img src="{{article.thumbnail.url}}" alt="computer lab">
                 <h1>{{article.title}}</h1>
                 <p>{{article.desc|truncatechars:298}}</p>
+                <a href="articleView/{{article.id}}" style="text-decoration:none;">
+                    <button class="btn btn-primary">Read</button>
+                </a>
             </div>
         </a>
     {% endfor %}
@@ -44,5 +47,5 @@
 </footer>
 {% endblock body %}
 {% block script %}
-<script src="{% static 'js/typing.js' %}"></script>
+<script src="{% static 'js/typing.js' %}" type="application/javascript"></script>
 {% endblock script %}
