@@ -58,8 +58,8 @@ input, textarea{
     #banner::before{
         content: "";
         position: absolute;
-        background: url(../images/bg1.jpg) no-repeat center center/cover;
-        clip-path: polygon(0 0, 100% 0, 100% 71%, 0 71%);
+        background: url(../images/featured1.jpg) no-repeat center center/cover;
+        /* clip-path: polygon(0 0, 100% 0, 100% 71%, 0 71%); */
         top: 0;
         left: 0;
         height: 609px;
