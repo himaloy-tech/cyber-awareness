@@ -26,7 +26,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', '127.0.0.1']
+ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
+# ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
 
 SESSION_COOKIE_SECURE = True
 
@@ -38,8 +39,14 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
        'https://cyber-awareness-7qrkc.ondigitalocean.app',
-       'https://127.0.0.1:8000'
+       'https://www.cybercare.net.in',
+       'http://127.0.0.1:8000'
 )
+
+# CORS_ORIGIN_WHITELIST = (
+#        'https://cyber-awareness-7qrkc.ondigitalocean.app',
+#        'https://www.cybercare.net.in',
+# )
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
@@ -117,17 +124,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd71q270hrkhfr8',
-#         'USER': 'tbizcmzltdnrrb',
-#         'PASSWORD': '5fc260f51f7034d2800ac79271a242f59b494408938a61b718059f29b023e6ea',
-#         'HOST': 'ec2-52-18-116-67.eu-west-1.compute.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -160,11 +156,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+DISABLE_DARK_MODE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-DISABLE_DARK_MODE = True
 
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
@@ -182,8 +177,8 @@ AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 
-AWS_LOCATION = 'static'
 # static settings
+AWS_LOCATION = 'static'
 STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
