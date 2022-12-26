@@ -29,6 +29,7 @@ DEBUG = False
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
 ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
 
+
 SESSION_COOKIE_SECURE = True
 
 # Application definition
@@ -47,6 +48,11 @@ CORS_ORIGIN_WHITELIST = (
        'https://cyber-awareness-7qrkc.ondigitalocean.app',
        'https://www.cybercare.net.in',
 )
+
+# CORS_ORIGIN_WHITELIST = (
+#        'https://cyber-awareness-7qrkc.ondigitalocean.app',
+#        'https://www.cybercare.net.in',
+# )
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
