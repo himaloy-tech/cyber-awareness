@@ -12,7 +12,7 @@
             <div class="box-front" id="box-{{article.id}}">
                 <img src="{{article.thumbnail.url}}" alt="computer lab">
                 <h1>{{article.title}}</h1>
-                <p>{{article.desc|truncatechars:298}}</p>
+                <p>{{article.cardText|truncatechars:298}}</p>
                 <a href="articleView/{{article.id}}" style="text-decoration:none;">
                     <button class="btn btn-primary" type="button">Read</button>
                 </a>

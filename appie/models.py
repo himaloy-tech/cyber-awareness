@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Contact(models.Model):
@@ -14,7 +14,8 @@ class Contact(models.Model):
 class Article(models.Model):
     thumbnail = models.ImageField(upload_to='thumbnails')
     title = models.TextField(default="")
-    desc = models.TextField()
+    cardText = models.TextField(blank=True)
+    desc = RichTextField()
     id = models.AutoField(primary_key=True)
     date = models.DateField(auto_now_add=True)
 

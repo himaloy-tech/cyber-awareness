@@ -15,7 +15,7 @@
                         alt="blog">
                     <div class="p-6">
                         <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{article.title}}</h1>
-                        <p class="leading-relaxed mb-3">{{article.desc|truncatechars:298}}</p>
+                        <p class="leading-relaxed mb-3">{{article.cardText|truncatechars:298}}</p>
                         <div class="flex items-center flex-wrap ">
                             <a href="/articleView/{{article.id}}">
                                 <button type="button" class="btn btn-info">View Material</button>

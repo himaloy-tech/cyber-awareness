@@ -61,6 +61,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 INSTALLED_APPS = [
+    'django_non_dark_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
     'storages',
     'corsheaders',
     'django_cleanup.apps.CleanupConfig',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -107,13 +109,6 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -158,6 +153,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DISABLE_DARK_MODE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

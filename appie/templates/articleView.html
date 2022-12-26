@@ -6,9 +6,10 @@
         padding: 20px;
     }
 
-    #articledata {
+    p {
         padding-top: 6px !important;
         padding: 15%;
+        padding-bottom: 1rem !important;
         text-align: justify;
     }
 </style>
@@ -18,7 +19,7 @@
     <h2 style="padding: 20px;">{{article.title}}</h2>
 </center>
 <center>
-    <p id="articledata">{{article.desc}}</p>
+    {{article.desc|safe}}
 </center>
 <hr>
 <center>

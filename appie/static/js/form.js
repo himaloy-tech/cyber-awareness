@@ -34,7 +34,7 @@ function bringComments() {
                 let date = comment.time.split("T");
                 let time = date[1].split(".")
                 let html = `<div class="card-header">
-                ${date[0]} ${time[0]}
+                ${date[0]} ${time[0]} (GMT)
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">

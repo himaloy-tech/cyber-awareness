@@ -49,5 +49,5 @@ def comment(request, articleId):
 
 def articlehub(request):
     return render(request, "articlehub.html", {
-        "Articles" : Article.objects.all()
+        "Articles" : Article.objects.all().order_by('id')
     })
