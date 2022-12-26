@@ -23,6 +23,6 @@ urlpatterns = [
     path('', include("appie.urls"))
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-admin.site.site_header = "Appie"
-admin.site.site_title = "Appie"
+admin.site.site_header = "Cyber Care"
+admin.site.site_title = "Cyber Care"
 admin.site.index_title = "Welcome to Admin Panel"
