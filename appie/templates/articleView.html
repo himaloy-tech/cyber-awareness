@@ -6,7 +6,7 @@
         padding: 20px;
     }
 
-    p {
+    #content_text {
         padding-top: 6px !important;
         padding: 15%;
         padding-bottom: 1rem !important;
@@ -19,7 +19,9 @@
     <h2 style="padding: 20px;">{{article.title}}</h2>
 </center>
 <center>
-    {{article.desc|safe}}
+    <div id="content_text">
+        {{article.desc|safe}}
+    </div>
 </center>
 <hr>
 <center>
