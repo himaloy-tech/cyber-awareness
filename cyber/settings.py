@@ -184,5 +184,7 @@ PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
 
+CKEDITOR_BASEPATH = f'https://cyber-awareness-files.sgp1.digitaloceanspaces.com/static/ckeditor/ckeditor/'
+
 # PRIVATE_MEDIA_LOCATION = 'private'
 # PRIVATE_FILE_STORAGE = 'cyber.storage_backends.PrivateMediaStorage'
