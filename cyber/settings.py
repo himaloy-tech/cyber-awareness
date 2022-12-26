@@ -61,6 +61,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 INSTALLED_APPS = [
+    'django_non_dark_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
     'storages',
     'corsheaders',
     'django_cleanup.apps.CleanupConfig',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -161,6 +163,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+DISABLE_DARK_MODE = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
