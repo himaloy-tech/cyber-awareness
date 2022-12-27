@@ -244,6 +244,8 @@ body{
     width: 92%;
     padding: 10px;
     margin: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .box-front h1{
