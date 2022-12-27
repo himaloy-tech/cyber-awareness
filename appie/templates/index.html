@@ -8,21 +8,36 @@
 <h1 class="center">Popular Articles</h1>
 <section id="features">
     {% for article in Articles %}
-        <a href="articleView/{{article.id}}" style="text-decoration: none;" aria-label="view the article">
-            <div class="box-front" id="box-{{article.id}}">
-                <img src="{{article.thumbnail.url}}" alt="computer lab">
-                <h1>{{article.title}}</h1>
-                <p>{{article.cardText|truncatechars:298}}</p>
-                <a href="articleView/{{article.id}}" style="text-decoration:none;">
-                    <button class="btn btn-primary" type="button">Read</button>
-                </a>
-            </div>
-        </a>
+    <a href="articleView/{{article.id}}" style="text-decoration: none;" aria-label="view the article">
+        <div class="box-front" id="box-{{article.id}}">
+            <img src="{{article.thumbnail.url}}" alt="computer lab">
+            <h1>{{article.title}}</h1>
+            <p>{{article.cardText|truncatechars:298}}</p>
+            <a href="articleView/{{article.id}}" style="text-decoration:none;">
+                <button class="btn btn-primary" type="button">Read</button>
+            </a>
+        </div>
+    </a>
     {% endfor %}
 </section>
 <div class="container-btn">
     <a href="/articlehub">
         <button class="submit-btn" type="button" style="margin-bottom: 1rem;">More Articles</button>
+    </a>
+</div>
+<section id="features">
+    {% for video in Videos %}
+        <div class="box-front" id="video_box-{{video.id}}" style="border-radius: 20px;">
+            <div class="iframe-container">
+                {{video.video_link|safe}}
+            </div>
+            <h2>{{video.title|truncatechars:23}}</h2>
+        </div>
+    {% endfor %}
+</section>
+<div class="container-btn">
+    <a href="https://www.youtube.com/channel/UCHqlVmCfpBoOcf92AbenDiQ">
+        <button class="submit-btn" type="button" style="margin-bottom: 1rem;">More Videos</button>
     </a>
 </div>
 <section class="contact">

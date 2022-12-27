@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@1&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     overflow: hidden;
 }
 
-.loader{
+.loader {
     height: 100vh;
     background-color: white;
     display: flex;
@@ -27,27 +27,28 @@ body{
 
     0%,
     100% {
-      animation-timing-function: cubic-bezier(0.2 0 0.8 0.8)
+        animation-timing-function: cubic-bezier(0.2 0 0.8 0.8)
     }
 
     50% {
-      animation-timing-function: cubic-bezier(0.2 0.2 0.8 1)
+        animation-timing-function: cubic-bezier(0.2 0.2 0.8 1)
     }
 
     0% {
-      transform: rotate(0deg)
+        transform: rotate(0deg)
     }
 
     50% {
-      transform: rotate(180deg)
+        transform: rotate(180deg)
     }
 
     100% {
-      transform: rotate(360deg)
+        transform: rotate(360deg)
     }
 }
 
 @keyframes ldio-x5bo2aho19i-s {
+
     0%,
     100% {
         animation-timing-function: cubic-bezier(0.2 0 0.8 0.8)
@@ -115,39 +116,40 @@ body{
     transform: translateZ(0) scale(1);
     backface-visibility: hidden;
     transform-origin: 0 0;
-/* see note above */
+    /* see note above */
 }
 
 .ldio-x5bo2aho19i div {
     box-sizing: content-box;
 }
 
-#navbar{
+#navbar {
     position: sticky;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(20, 20,20);
+    background-color: rgb(20, 20, 20);
     top: 0px;
     opacity: 0.89;
     z-index: 1;
 }
 
-#logo{
+#logo {
     height: 75px;
-    border-radius: 49% 51% 49% 51% / 48% 47% 53% 52% ;
+    border-radius: 49% 51% 49% 51% / 48% 47% 53% 52%;
     margin: 2px;
+    opacity: 1 !important;
 }
 
-#nav-list{
+#nav-list {
     display: flex;
     align-items: center;
 }
 
-.list-item{
+.list-item {
     list-style: none;
 }
 
-.list-item a{
+.list-item a {
     padding: 7px 22px;
     text-decoration: none;
     color: white;
@@ -156,7 +158,7 @@ body{
     margin: 6px;
 }
 
-.list-item a:hover{
+.list-item a:hover {
     background-color: white;
     color: black !important;
     transition: all 0.6s;
@@ -164,14 +166,14 @@ body{
 
 /* Banner image */
 
-#banner{
+#banner {
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#banner::before{
+#banner::before {
     content: "";
     position: absolute;
     background: url(../images/featured1.jpg) no-repeat center center/cover;
@@ -183,10 +185,10 @@ body{
     z-index: -1;
 }
 
-#banner h1{
+#banner h1 {
     color: white;
     font-weight: bolder;
-    text-shadow: 2px 3px 5px rgba(0,0,0,1);
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
     padding: 0 40px;
     font-size: 3rem;
     text-align: center;
@@ -199,20 +201,36 @@ body{
     width: 3px;
     animation: blink 1s infinite;
 }
+
 #banner h1 span.cursor.typing {
     animation: none;
 }
+
 @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
+    0% {
+        background-color: #ccc;
+    }
+
+    49% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #ccc;
+    }
 }
 
 /* Our speciality */
 
-.center{
+.center {
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
@@ -221,14 +239,14 @@ body{
 }
 
 /* Cards */
-#features{
+#features {
     display: flex;
     justify-content: center;
     margin: 34px;
     position: relative;
 }
 
-.box-front{
+.box-front {
     border: 2px solid #8c8686;
     margin: 3px 6px;
     border-radius: 30px;
@@ -237,7 +255,7 @@ body{
     display: block;
 }
 
-.box-front img{
+.box-front img {
     border-radius: 23px;
     display: block;
     height: 237px;
@@ -248,23 +266,40 @@ body{
     object-position: center;
 }
 
-.box-front h1{
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 6px;
+}
+
+.box-front h1 {
     padding: 10px;
     color: #323131;
 }
 
-.box-front p{
+.box-front p {
     color: #323131;
 }
 
-.box-front:hover{
+.box-front:hover {
     transition: all 0.3s ease-out;
-    box-shadow: 7px 5px 24px 3px rgba(0,0,0,0.75);
+    box-shadow: 7px 5px 24px 3px rgba(0, 0, 0, 0.75);
 }
 
 /* Contact Us */
 
-.formwebsite{
+.formwebsite {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,7 +307,7 @@ body{
     position: relative;
 }
 
-.formwebsite::before{
+.formwebsite::before {
     content: "";
     position: absolute;
     left: 0;
@@ -283,7 +318,7 @@ body{
     background: url(../images/contact.jpg) no-repeat center center/cover;
 }
 
-input, textarea{
+input, textarea {
     width: 100%;
     padding: 12px;
     margin: 9px;
@@ -293,22 +328,23 @@ input, textarea{
     outline: none;
 }
 
-form{
+form {
     width: 40%;
     margin-top: 20px;
 }
-label{
+
+label {
     font-size: 1.3rem;
     color: white;
     text-shadow: 0 6px 6px black;
 }
 
-.container-btn{
+.container-btn {
     display: flex;
     justify-content: center;
 }
 
-.submit-btn{
+.submit-btn {
     text-transform: uppercase;
     background-color: rgb(255, 137, 66);
     padding: 15px 26px;
@@ -319,7 +355,7 @@ label{
     border: none;
 }
 
-.submit-btn::before{
+.submit-btn::before {
     content: "";
     height: 100%;
     width: 100%;
@@ -332,25 +368,25 @@ label{
     transition: all 0.5s;
 }
 
-.submit-btn:hover::before{
+.submit-btn:hover::before {
     transform: scaleX(1.2) scaleY(1.6);
     opacity: 0;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     transform: translateY(-5px);
 }
 
-.submit-btn:active{
+.submit-btn:active {
     transform: translateX(-3px);
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.6);
 }
 
 /* footer */
 
-footer{
+footer {
     text-align: center;
     background-color: #191919;
     color: white;
@@ -358,7 +394,7 @@ footer{
 }
 
 /* Ham Burger */
-.burger{
+.burger {
     display: none;
     position: absolute;
     left: 5%;
@@ -366,7 +402,7 @@ footer{
     cursor: pointer;
 }
 
-.line{
+.line {
     width: 33px;
     background-color: white;
     height: 5.5px;
@@ -389,7 +425,7 @@ footer{
 }
 
 
-.social-media-icons a img{
+.social-media-icons a img {
     height: 33px;
     border-radius: 9px;
 }
