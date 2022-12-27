@@ -14,7 +14,7 @@ class Contact(models.Model):
 class Article(models.Model):
     thumbnail = models.ImageField(upload_to='thumbnails')
     title = models.TextField(default="")
-    cardText = models.TextField(blank=True)
+    cardText = models.TextField()
     desc = RichTextField()
     id = models.AutoField(primary_key=True)
     date = models.DateField(auto_now_add=True)
