@@ -37,3 +37,11 @@ class Comment(models.Model):
             "time" : self.time
         }
         return context
+
+class Video(models.Model):
+    title = models.TextField()
+    video_link = models.TextField(help_text="width='383' height='210'")
+    id = models.AutoField(primary_key=True)
+
+    def __str__(self) -> str:
+        return f"{self.title}"    
