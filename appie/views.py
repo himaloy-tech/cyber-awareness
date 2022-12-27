@@ -1,16 +1,12 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
-from .models import Contact, Article, Comment
+from .models import Contact, Article, Comment, Video
 from django.http import JsonResponse
 # Create your views here.
 def index(request):
-    Articles = [
-        Article.objects.get(id=1),
-        Article.objects.get(id=2),
-        Article.objects.get(id=3),
-    ]
     return render(request, "index.html", {
-        "Articles" : Articles
+        "Articles" : Article.objects.all().order_by('id')[:3],
+        "Videos" : Video.objects.all().order_by('id')[:3],
     })
 
 
