@@ -161,33 +161,33 @@ DISABLE_DARK_MODE = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR/'appie', "static")
-# ]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR/'appie', "static")
+]
 
-# STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-AWS_ACCESS_KEY_ID = 'DO00MXLHX3C44L97TKN3'
-AWS_SECRET_ACCESS_KEY = '8WRHOXM7lb5UosZIagrwuVgIzPw3EH3vJ7ZnarnhZ1w'
-AWS_STORAGE_BUCKET_NAME = 'cyber-awareness-files'
-AWS_DEFAULT_ACL = 'public-read'
-AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
-AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+# AWS_ACCESS_KEY_ID = 'DO00MXLHX3C44L97TKN3'
+# AWS_SECRET_ACCESS_KEY = '8WRHOXM7lb5UosZIagrwuVgIzPw3EH3vJ7ZnarnhZ1w'
+# AWS_STORAGE_BUCKET_NAME = 'cyber-awareness-files'
+# AWS_DEFAULT_ACL = 'public-read'
+# AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
+# AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 
-# static settings
-AWS_LOCATION = 'static'
-STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# # static settings
+# AWS_LOCATION = 'static'
+# STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# public media settings
-PUBLIC_MEDIA_LOCATION = 'media'
-MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
-DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
+# # public media settings
+# PUBLIC_MEDIA_LOCATION = 'media'
+# MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
+# DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
 
-CKEDITOR_BASEPATH = f'https://cyber-awareness-files.sgp1.digitaloceanspaces.com/static/ckeditor/ckeditor/'
+# CKEDITOR_BASEPATH = f'https://cyber-awareness-files.sgp1.digitaloceanspaces.com/static/ckeditor/ckeditor/'
 
 # PRIVATE_MEDIA_LOCATION = 'private'
 # PRIVATE_FILE_STORAGE = 'cyber.storage_backends.PrivateMediaStorage'
