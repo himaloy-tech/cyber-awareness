@@ -75,4 +75,7 @@ input, textarea{
         padding-left: 5px !important;
         padding-right: 5px !important;
     }
+    .social-media-icons{
+        display: none;
+    }
 }

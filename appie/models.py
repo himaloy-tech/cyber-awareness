@@ -40,7 +40,8 @@ class Comment(models.Model):
 
 class Video(models.Model):
     title = models.TextField()
-    video_link = models.TextField(help_text="width='383' height='210'")
+    # video_link = models.TextField(help_text='width="300" height="170" style="border-radius:10px;"')
+    video_link = models.TextField()
     id = models.AutoField(primary_key=True)
 
     def __str__(self) -> str:
