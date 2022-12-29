@@ -49,10 +49,6 @@ CORS_ORIGIN_WHITELIST = (
        'https://www.cybercare.net.in',
 )
 
-# CORS_ORIGIN_WHITELIST = (
-#        'https://cyber-awareness-7qrkc.ondigitalocean.app',
-#        'https://www.cybercare.net.in',
-# )
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
