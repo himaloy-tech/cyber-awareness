@@ -2,6 +2,14 @@
 {% load static %}
 {% block body %}
 
+{% if messages %}
+{% for message in messages %}
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    {{message|safe}}
+</div>
+{% endfor %}
+{% endif %}
 <section id="banner">
     <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
 </section>
@@ -27,12 +35,12 @@
 </div>
 <section id="features">
     {% for video in Videos %}
-        <div class="box-front" id="video_box-{{video.id}}" style="border-radius: 20px;">
-            <div class="iframe-container">
-                {{video.video_link|safe}}
-            </div>
-            <h4 style="color: black;padding-top: 10px;margin-bottom: 5px;">{{video.title|truncatechars:31}}</h4>
+    <div class="box-front" id="video_box-{{video.id}}" style="border-radius: 20px;">
+        <div class="iframe-container">
+            {{video.video_link|safe}}
         </div>
+        <h4 style="color: black;padding-top: 10px;margin-bottom: 5px;">{{video.title|truncatechars:31}}</h4>
+    </div>
     {% endfor %}
 </section>
 <div class="container-btn">
@@ -63,8 +71,7 @@
 <script src="{% static 'js/typing.js' %}" type="application/javascript"></script>
 <script>
     document.getElementById('youtube_channel').onclick = openyoutube;
-    function openyoutube()
-    {
+    function openyoutube() {
         window.open('https://www.youtube.com/channel/UCHqlVmCfpBoOcf92AbenDiQ');
         return false;
     }

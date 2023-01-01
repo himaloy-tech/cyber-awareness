@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
             success: function (json) {
                 document.querySelector('#text').value = '';
                 bringComments();
+                let alert = document.querySelector('.alert');
+                alert.innerHTML = `${json.message}` + alert.innerHTML;
+                alert.style.display = 'block';
                 window.scrollTo(0, 0);
             }
         });

@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
 from .models import Contact, Article, Comment, Video
 from django.http import JsonResponse
+from django.contrib import messages
+
 # Create your views here.
 def index(request):
     return render(request, "index.html", {
@@ -17,6 +19,7 @@ def contact(request):
         email = request.POST.get('email')
         obj = Contact.objects.create(name=name, message=message, email=email)
         obj.save()
+        messages.success(request, "<strong>Success!</strong> Your Query has been Successfully Submitted")
         return HttpResponseRedirect(reverse("index"))
     else:
         return redirect('/')
@@ -35,7 +38,7 @@ def PostComment(request):
         comment = Comment(article=Article.objects.get(id=id), comment=text)
         comment.save()
         return JsonResponse({
-            "message" : "Comment Successfully posted."
+            "message" : "Comment Posted Successfully"
         })
 
 def comment(request, articleId):
