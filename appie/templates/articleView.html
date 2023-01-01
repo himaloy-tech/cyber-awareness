@@ -8,6 +8,9 @@
 </style>
 {% endblock style %}
 {% block body %}
+<div class="alert" style="display: none;">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>
 <center>
     <h2 style="padding: 20px;">{{article.title}}</h2>
 </center>
