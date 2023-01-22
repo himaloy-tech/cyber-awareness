@@ -239,7 +239,7 @@ body {
 }
 
 /* Cards */
-#features {
+.features {
     display: flex;
     justify-content: center;
     margin: 34px;
