@@ -122,10 +122,10 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'da506qd5a86r7n',
-        'USER': 'desqihqqdzpawp',
-        'PASSWORD': '469b7bce53b6473b054d3b734672b66dd00ad056a1c73528824b2703c2e67e3e',
-        'HOST': 'ec2-52-209-225-31.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd71tvjpssb48l3',
+        'USER': 'lgoystnhqlcoqu',
+        'PASSWORD': '53b323c8382a4047a13793867fac6a3ad162a0cb1afae5d467d296b384095d03',
+        'HOST': 'ec2-54-76-132-202.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
