@@ -17,10 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from dotenv import load_dotenv, find_dotenv
-
-load_dotenv(find_dotenv())
-
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -28,46 +24,6 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
 ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
-
-
-SESSION_COOKIE_SECURE = True
-
-# Application definition
-
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_ORIGIN_ALLOW_ALL = False
-
-# CORS_ORIGIN_WHITELIST = (
-#        'https://cyber-awareness-7qrkc.ondigitalocean.app',
-#        'https://www.cybercare.net.in',
-#        'http://127.0.0.1:8000'
-# )
-
-CORS_ORIGIN_WHITELIST = (
-       'https://cyber-awareness-7qrkc.ondigitalocean.app',
-       'https://www.cybercare.net.in',
-)
-
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-]
-CORS_ALLOW_HEADERS = [
-    "accept",
-    "accept-encoding",
-    "authorization",
-    "content-type",
-    "dnt",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-]
 
 INSTALLED_APPS = [
     'django_non_dark_admin',
@@ -77,11 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'appie',
-    'storages',
-    'corsheaders',
-    'django_cleanup.apps.CleanupConfig',
-    'ckeditor'
+    'appie'
 ]
 
 MIDDLEWARE = [
@@ -167,33 +119,11 @@ DISABLE_DARK_MODE = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR/'appie', "static")
-# ]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR/'appie', "static")
+]
 
-# STATIC_ROOT=os.path.join(BASE_DIR, 'assets')
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-AWS_ACCESS_KEY_ID = 'DO00MXLHX3C44L97TKN3'
-AWS_SECRET_ACCESS_KEY = '8WRHOXM7lb5UosZIagrwuVgIzPw3EH3vJ7ZnarnhZ1w'
-AWS_STORAGE_BUCKET_NAME = 'cyber-awareness-files'
-AWS_DEFAULT_ACL = 'public-read'
-AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
-AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-
-# static settings
-AWS_LOCATION = 'static'
-STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# public media settings
-PUBLIC_MEDIA_LOCATION = 'media'
-MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{PUBLIC_MEDIA_LOCATION}/'
-DEFAULT_FILE_STORAGE = 'cyber.storage_backends.PublicMediaStorage'
-
-CKEDITOR_BASEPATH = f'https://cyber-awareness-files.sgp1.digitaloceanspaces.com/static/ckeditor/ckeditor/'
-
-# PRIVATE_MEDIA_LOCATION = 'private'
-# PRIVATE_FILE_STORAGE = 'cyber.storage_backends.PrivateMediaStorage'
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
