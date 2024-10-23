@@ -17,14 +17,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY='$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
-# ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
+# ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
+ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
 
 INSTALLED_APPS = [
     'django_non_dark_admin',
