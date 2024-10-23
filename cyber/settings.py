@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY='$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
-ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
+ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
+# ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in']
 
 INSTALLED_APPS = [
     'django_non_dark_admin',
@@ -34,11 +34,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'appie'
+    'appie',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -75,10 +75,10 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd71tvjpssb48l3',
-        'USER': 'lgoystnhqlcoqu',
-        'PASSWORD': '53b323c8382a4047a13793867fac6a3ad162a0cb1afae5d467d296b384095d03',
-        'HOST': 'ec2-54-76-132-202.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd9h6vuma1viuc7',
+        'USER': 'u8t58cehj9fl6c',
+        'PASSWORD': 'pfa331e7a1fe2445da88193de7a6615f7f683e973345a88e6caa61f0361a230fe',
+        'HOST': 'c9hqulqrud3fuv.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
