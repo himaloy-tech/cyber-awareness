@@ -20,11 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
-# ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
+# ALLOWED_HOSTS = ['']
 
 
 INSTALLED_APPS = [
@@ -83,10 +83,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-import dj_database_url
-db_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update(db_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
