@@ -17,14 +17,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
-ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
-# ALLOWED_HOSTS = ['127.0.0.1']
+# ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
+ALLOWED_HOSTS = ['198.54.121.240']
 
 
 INSTALLED_APPS = [
@@ -75,13 +75,12 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'cybesncx_main_db',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'USER': 'cybesncx_mrityunjoy',
-        'PASSWORD': '3a.qIie&w]B*',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9h6vuma1viuc7',
+        'USER': 'u8t58cehj9fl6c',
+        'PASSWORD': 'pfa331e7a1fe2445da88193de7a6615f7f683e973345a88e6caa61f0361a230fe',
+        'HOST': 'c9hqulqrud3fuv.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -127,6 +126,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR/'appie', "static")
 ]
 
-STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+STATIC_ROOT=os.path.join(BASE_DIR/'public_html', 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
