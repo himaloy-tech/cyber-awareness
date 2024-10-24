@@ -73,14 +73,20 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd9h6vuma1viuc7',
+#         'USER': 'u8t58cehj9fl6c',
+#         'PASSWORD': 'pfa331e7a1fe2445da88193de7a6615f7f683e973345a88e6caa61f0361a230fe',
+#         'HOST': 'c9hqulqrud3fuv.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9h6vuma1viuc7',
-        'USER': 'u8t58cehj9fl6c',
-        'PASSWORD': 'pfa331e7a1fe2445da88193de7a6615f7f683e973345a88e6caa61f0361a230fe',
-        'HOST': 'c9hqulqrud3fuv.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
