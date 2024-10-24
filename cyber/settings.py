@@ -24,7 +24,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
 ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
-# ALLOWED_HOSTS = ['']
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -75,12 +75,13 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9h6vuma1viuc7',
-        'USER': 'u8t58cehj9fl6c',
-        'PASSWORD': 'pfa331e7a1fe2445da88193de7a6615f7f683e973345a88e6caa61f0361a230fe',
-        'HOST': 'c9hqulqrud3fuv.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'cybesncx_main_db',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'cybesncx_mrityunjoy',
+        'PASSWORD': '3a.qIie&w]B*',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},
     }
 }
 
