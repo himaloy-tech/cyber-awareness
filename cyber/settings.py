@@ -20,11 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '$7rp3_9tkwrb*e949lmgojql88!jbc&^s)tv)zgo)4#unyorv6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['cyber-awareness-7qrkc.ondigitalocean.app', 'www.cybercare.net.in', '127.0.0.1']
-# ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
-ALLOWED_HOSTS = ['198.54.121.240']
+# ALLOWED_HOSTS = ['198.54.121.240']
+ALLOWED_HOSTS = ['198.54.121.240', 'www.cybercare.net.in', 'cybercare.net.in']
 
 
 INSTALLED_APPS = [
@@ -83,10 +83,22 @@ WSGI_APPLICATION = 'cyber.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'cybesncx_main_db',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'cybesncx_mrityunjoy',
+        'PASSWORD': '3a.qIie&w]B*',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,"use_pure": True},
     }
 }
 
@@ -132,6 +144,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR/'appie', "static")
 ]
 
-STATIC_ROOT=os.path.join(BASE_DIR/'public_html', 'static')
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# CKEDITOR_BASEPATH = 'static/ckeditor/ckeditor/'
